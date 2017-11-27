@@ -44,22 +44,25 @@ $ KMATCHER_SETTINGS=settings.cfg env/bin/gunicorn keywords_matcher:app --workers
 ## Throughput
 
 Number of workers: 2
+
 |             | Average latency | Max latency | Requests per second |
 |-------------|-----------------|-------------|---------------------|
 | /parse      | 24.60ms         | 99.34ms     | 8110                |
 | /parse_slow | 162.42ms        | 791ms       | 1228                |
 
 Number of workers: 4
+
 |             | Average latency | Max latency | Requests per second |
 |-------------|-----------------|-------------|---------------------|
-| /parse      | 14.92ms        | 44.08ms    | 13384.49                |
-| /parse_slow | 86.49ms       | 190ms       | 2270             |
+| /parse      | 14.92ms         | 44.08ms     | 13384.49            |
+| /parse_slow | 86.49ms         | 190ms       | 2270                |
 
 Number of workers: 8
+
 |             | Average latency | Max latency | Requests per second |
 |-------------|-----------------|-------------|---------------------|
-| /parse      | 12.63ms         | 82.81ms     | 16410.23               |
-| /parse_slow |  74.14ms      | 173.62ms       | 2686.17                |
+| /parse      | 12.63ms         | 82.81ms     | 16410.23            |
+| /parse_slow |  74.14ms        | 173.62ms       | 2686.17          |
 
 Measurements were done on a macbook pro 2017 using wrk:
 ```sh
