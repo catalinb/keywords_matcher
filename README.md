@@ -71,7 +71,7 @@ $ wrk -d20s -t10 -c200 http://localhost:8080/parse\?text\=I+have+a+sore+throat+a
 ```
 
 ### Discussion
-**/parse_slow** is slow (surprise!) because it does a n^2 lookup.
+**/parse_slow** is slow (surprise!) because it does a n^2 lookup.  
 **/parse** is handled using a finite state machine built using the aho corasick algorithm. The lookup is linear in the length of the input string plus the number of matches.
 
 Testing the automaton lookup time separately, the throughput for a single thread was several orders of magnitude higher, therefore
