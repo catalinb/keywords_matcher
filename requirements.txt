@@ -1,0 +1,5 @@
+flask==0.12
+jsonify==0.5
+pyahocorasick==1.1.5
+gunicorn
+meinheld
